@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Tela Login c/ darkmode</title>
+    <title>Login com Dark Mode</title>
 </head>
 <body>
     
@@ -13,16 +13,31 @@
             <input type="checkbox" onclick="switchTheme()">
             <span class="slider"></span>
         </label>
-    </div><!--theme-->
-    <div class="login-box">
-        <h1>Entrar</h1>
-        <form>
-            <input type="text" placeholder="E-mail" id="login-input">
-            <input type="password" placeholder="Senha" id="login-input">
-            <button type="submit" id="login-button">Entrar</button>
-        </form>
-    </div><!--login-box-->
+    </div>
 
+    <div class="auth-box">
+        <div class="form-container" id="login-container">
+            <h1>Entrar</h1>
+            <form id="login-form">
+                <input type="text" placeholder="E-mail" id="login-email">
+                <input type="password" placeholder="Senha" id="login-password">
+                <button type="submit" id="login-button">Entrar</button>
+                <p class="toggle-link" onclick="toggleForms()">Ainda não tem uma conta? Registre-se</p>
+            </form>
+        </div>
+
+        <div class="form-container" id="register-container" style="display:none;">
+            <h1>Registrar</h1>
+            <form id="register-form">
+                <input type="text" placeholder="Nome" id="register-name">
+                <input type="text" placeholder="E-mail" id="register-email">
+                <input type="password" placeholder="Senha" id="register-password">
+                <button type="submit" id="register-button">Registrar</button>
+                <p class="toggle-link" onclick="toggleForms()">Já tem uma conta? Entrar</p>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
 </body>
-<script src="script.js"></script>
 </html>
